@@ -28,9 +28,8 @@ args = parser.parse_args()
 device = "cuda:0" if torch.cuda.is_available() else "cpu"
 
 CKPT_PATH = 'weights/best.pt'
-yolov5 = torch.hub.load('./yolov5','custom',
+yolov5 = torch.hub.load('ultralytics/yolov5', 'custom',
                         path=CKPT_PATH,
-                        source='local',
                         force_reload=True,
                         verbose=False)
 

@@ -76,4 +76,4 @@ def label_gen(img,llie):
 
 if __name__=='__main__':
     lpr = gr.Interface(fn=label_gen, inputs=["image",gr.inputs.Checkbox(default=False, label="Low Light Image Enhancement")], outputs=["dataframe","image"],title="License Plate Recognition")
-    lpr.launch(share=True)
+    lpr.launch(share=False)

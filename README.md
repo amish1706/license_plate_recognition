@@ -15,7 +15,7 @@ git clone https://github.com/amish1706/license_plate_recognition
 # Inference Script
 
 ```python
-python [pipeline.py](http://pipeline.py) <image_path>
+python pipeline.py <image_path>
 ```
 
 ### Required Arguments:
@@ -30,9 +30,8 @@ python [pipeline.py](http://pipeline.py) <image_path>
 - `--out_dir`: Output directory for saving results
 - `--model`: TrOCR model used for OCR (default : trocr-small-printed) Check [available](https://huggingface.co/models?search=troc) models
 
-# Gradio Local Deployment
-
 ---
+# Gradio Local Deployment
 
 ```python
 python deploy.py

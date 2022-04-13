@@ -15,7 +15,7 @@ git clone https://github.com/amish1706/license_plate_recognition
 # Inference Script
 
 ```python
-python [pipeline.py](http://pipeline.py) <image_path>
+python pipeline.py <image_path>
 ```
 
 ### Required Arguments:

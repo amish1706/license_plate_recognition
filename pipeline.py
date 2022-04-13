@@ -3,6 +3,7 @@ import llie_zerodce
 from PIL import Image
 import numpy as np
 import cv2
+import re
 import time
 import logging
 import torch
@@ -85,6 +86,7 @@ def label_gen(img_path,args):
             plate = torch.from_numpy(plate)
             # print(plate.shape)
             label = gen_text(plate)
+            label = re.sub(r'[^\w\s]', '',label)
             if args.save:
                 save_image(plate.permute((2,0,1))/255.,args.out_dir+'/'+label+".png")
             labels.append(label)
